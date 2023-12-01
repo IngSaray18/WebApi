@@ -1,0 +1,52 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Códigos generados por setuptools
+dist/
+build/
+*.egg-info/
+
+# Archivos locales de configuración
+*.ini
+*.log
+*.cfg
+
+# Virtualenv
+venv/
+env/
+
+# Carpeta donde se almacenan las dependencias instaladas
+lib/
+lib64/
+__pycache__/
+bin/
+include/
+
+# Jupyter Notebooks
+.ipynb_checkpoints/
+
+# PyCharm files
+.idea/
+
+# Visual Studio Code
+.vscode/
+
+# SQLite database file
+*.db
+
+# macOS
+.DS_Store
+
+# Archivos de entorno
+.env
+
+# Archivos de compilación de Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Dependiendo de tus necesidades, puedes agregar más reglas según el entorno y las herramientas que estés utilizando.
