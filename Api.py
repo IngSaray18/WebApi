@@ -1,10 +1,14 @@
 from flask import Flask, jsonify
+from dotenv import load_dotenv
+from decouple import config  # Importa la función 'config' de python-decouple
+load_dotenv()
+
 import pyodbc
 
 app = Flask(__name__)
 
-# Configuración de la cadena de conexión
-conn_str = 'Driver={ODBC Driver 17 for SQL Server};Server=tcp:newsmg.database.windows.net,1433;Database=Prueba;Uid=PedroSaray;Pwd={1Admin1!};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
+# cadena de conexión
+conn_str = f'Driver={config("DB_DRIVER")};Server={config("DB_SERVER")};Database={config("DB_DATABASE")};Uid={config("DB_USER")};Pwd={config("DB_PASSWORD")};Encrypt=yes;TrustServerCertificate=no;Connection Timeout=30;'
 
 # Ruta para obtener datos desde la base de datos
 @app.route('/api/clientes', methods=['GET'])
